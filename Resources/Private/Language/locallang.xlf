@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2014-09-29T09:03:59Z" product-name="tournament">
+		<header/>
+		<body>
+			<trans-unit id="tx_tournament_domain_model_tournament1on1">
+				<source>Tournament1on1</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_tournament1on1.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_tournament1on1.points_winner">
+				<source>Points Winner</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_tournament1on1.points_loser">
+				<source>Points Loser</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_tournament1on1.points_draw">
+				<source>Points Draw</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_tournament1on1.events">
+				<source>Events</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_tournament1on1.player">
+				<source>Player</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_event1on1">
+				<source>Event1on1</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_event1on1.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_event1on1.date">
+				<source>Date</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_event1on1.encounter">
+				<source>Encounter</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_player1on1">
+				<source>Player1on1</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_player1on1.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_player1on1.short_name">
+				<source>Short Name</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_player1on1.icon">
+				<source>Icon</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_encounter1on1">
+				<source>Encounter1on1</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_encounter1on1.duration">
+				<source>Duration</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_encounter1on1.team_home_points">
+				<source>Team Home Points</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_encounter1on1.team_guest_points">
+				<source>Team Guest Points</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_encounter1on1.player_home">
+				<source>Player Home</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_encounter1on1.player_guest">
+				<source>Player Guest</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_tournamentallvsall">
+				<source>Tournament All Vs All</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_tournamentallvsall.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_tournamentallvsall.event">
+				<source>Event</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_eventallvsall">
+				<source>Event All Vs All</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_eventallvsall.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_eventallvsall.number_of_players">
+				<source>Number Of Players</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_eventallvsall.player">
+				<source>Player</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_playerallvsall">
+				<source>Player All Vs All</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_playerallvsall.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_playerallvsall.country">
+				<source>Country</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_playerallvsall.teams">
+				<source>Teams</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_countryallvsall">
+				<source>Country All Vs All</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_countryallvsall.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_countryallvsall.short_name">
+				<source>Short Name</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_teamallvsall">
+				<source>Team All Vs All</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_teamallvsall.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_tournamentko">
+				<source>Tournament Ko</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_tournamentko.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_tournamentko.number_of_player">
+				<source>Number Of Player</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_tournamentko.number_of_games_per_set">
+				<source>Number Of Games Per Set</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_tournamentko.number_of_sets">
+				<source>Number Of Sets</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_tournamentko.event">
+				<source>Event</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_eventko">
+				<source>Event Ko</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_eventko.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_eventko.date">
+				<source>Date</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_eventko.encounter">
+				<source>Encounter</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_encounterko">
+				<source>Encounter Ko</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_encounterko.points_player_home">
+				<source>Points Player Home</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_encounterko.points_player_guest">
+				<source>Points Player Guest</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_encounterko.player_home">
+				<source>Player Home</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_encounterko.player_guest">
+				<source>Player Guest</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_playerko">
+				<source>Player Ko</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_playerko.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_table">
+				<source>Table</source>
+			</trans-unit>
+			<trans-unit id="tx_tournament_domain_model_encounter">
+				<source>Encounters</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

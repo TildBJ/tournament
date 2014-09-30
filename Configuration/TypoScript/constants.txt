@@ -1,0 +1,15 @@
+
+plugin.tx_tournament {
+	view {
+		# cat=plugin.tx_tournament/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:tournament/Resources/Private/Templates/
+		# cat=plugin.tx_tournament/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:tournament/Resources/Private/Partials/
+		# cat=plugin.tx_tournament/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:tournament/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_tournament//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}

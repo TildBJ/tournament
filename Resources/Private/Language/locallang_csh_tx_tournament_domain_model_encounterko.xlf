@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2014-09-29T09:03:59Z" product-name="tournament">
+		<header/>
+		<body>
+			<trans-unit id="points_player_home.description">
+				<source>pointsPlayerHome</source>
+			</trans-unit>
+			<trans-unit id="points_player_guest.description">
+				<source>pointsPlayerGuest</source>
+			</trans-unit>
+			<trans-unit id="player_home.description">
+				<source>playerHome</source>
+			</trans-unit>
+			<trans-unit id="player_guest.description">
+				<source>playerGuest</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

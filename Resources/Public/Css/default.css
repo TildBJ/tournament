@@ -1,0 +1,63 @@
+#tx-tournament {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+#tx-tournament ul.tx-tournament-1on1-nav {
+	margin: 10px 0 0 0;
+	padding: 0;
+}
+
+#tx-tournament ul.tx-tournament-1on1-nav li {
+	list-style: none;
+	float: left;
+	position: relative;
+	top: 0;
+	margin: 1px 1px 0 0;
+	border-bottom-width: 0;
+	padding: 0;
+	white-space: nowrap;
+}
+
+#tx-tournament ul.tx-tournament-1on1-nav li a {
+	float: left;
+	padding: 8px 15px;
+	text-decoration: none;
+	color: #FFF;
+	background-color: #333;
+	border: 1px solid #333;
+}
+
+#tx-tournament ul.tx-tournament-1on1-nav li a:hover {
+	background-color: #FFF;
+	color: #333;
+}
+
+#tx-tournament .tx-tournament-encounter h2 {
+	margin: 0;
+}
+
+#tx-tournament .tx-tournament-encounter, #tx-tournament .tx-tournament-table {
+	clear: left;
+	padding: 10px;
+	border: 1px solid #333;
+}
+
+#tx-tournament .tx-tournament-encounter table, #tx-tournament .tx-tournament-table table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+#tx-tournament .tx-tournament-encounter table tr td, #tx-tournament .tx-tournament-table table tr td {
+	padding: 2px 4px;
+}
+
+#tx-tournament .tx-tournament-encounter .odd, #tx-tournament .tx-tournament-table .odd {
+	background-color: #CCC;
+}
+
+#tx-tournament table tr td.playerIcon,
+#tx-tournament table tr td.playerHomeIcon,
+#tx-tournament table tr td.playerGuestIcon {
+	text-align: right;
+}

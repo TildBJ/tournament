@@ -1,0 +1,29 @@
+<div class="tx-tournament-table">
+	<table>
+		<tr class="table tableHead">
+			<td><f:translate key="LLL:EXT:tournament/Resources/Private/Language/locallang_csh_tx_tournament_domain_model_tournament1on1.xlf:rank" /></td>
+			<td></td>
+			<td><f:translate key="LLL:EXT:tournament/Resources/Private/Language/locallang_csh_tx_tournament_domain_model_tournament1on1.xlf:team" /></td>
+			<td><f:translate key="LLL:EXT:tournament/Resources/Private/Language/locallang_csh_tx_tournament_domain_model_tournament1on1.xlf:matches" /></td>
+			<td><f:translate key="LLL:EXT:tournament/Resources/Private/Language/locallang_csh_tx_tournament_domain_model_tournament1on1.xlf:victories_short" /></td>
+			<td><f:translate key="LLL:EXT:tournament/Resources/Private/Language/locallang_csh_tx_tournament_domain_model_tournament1on1.xlf:draws_short" /></td>
+			<td><f:translate key="LLL:EXT:tournament/Resources/Private/Language/locallang_csh_tx_tournament_domain_model_tournament1on1.xlf:defeats_short" /></td>
+			<td><f:translate key="LLL:EXT:tournament/Resources/Private/Language/locallang_csh_tx_tournament_domain_model_tournament1on1.xlf:goals" /></td>
+			<td><f:translate key="LLL:EXT:tournament/Resources/Private/Language/locallang_csh_tx_tournament_domain_model_tournament1on1.xlf:goaldifference_short" /></td>
+			<td><f:translate key="LLL:EXT:tournament/Resources/Private/Language/locallang_csh_tx_tournament_domain_model_tournament1on1.xlf:points_short" /></td>
+		</tr>
+		<f:for each="{rows}" as="row" iteration="place">
+			<tr class="encounter {f:if(condition: '{place.isOdd}' then: 'odd', else: 'even')}">
+				<td>{place.cycle}.</td>
+				<td class="playerIcon"><f:if condition="{row.iconfile}"><f:image src="{row.iconfile.url}" alt="" width="24c" height="24c" /></f:if></td>
+				<td>{row.name}</td><td>{row.countGames}</td>
+				<td>{row.victories}</td>
+				<td>{row.draws}</td>
+				<td>{row.defeats}</td>
+				<td>{row.goals}:{row.goalsAgainst}</td>
+				<td>{row.goalsDifference}</td>
+				<td>{row.points}</td>
+			</tr>
+		</f:for>
+	</table>
+</div>

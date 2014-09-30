@@ -1,0 +1,19 @@
+<div id="tx-tournament">
+
+<f:if condition="{event}">
+
+	<f:render partial="Tournament1on1/nav" arguments="{navs: navs}" />
+
+	<f:render partial="Tournament1on1/event" arguments="{event: event}" />
+
+</f:if>
+
+<f:if condition="{rows}">
+
+	<f:render partial="Tournament1on1/nav" arguments="{navs: navs}" />
+
+	<f:render partial="Tournament1on1/table" arguments="{rows: rows}" />
+
+</f:if>
+
+</div>
