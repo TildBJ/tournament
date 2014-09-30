@@ -42,13 +42,6 @@ class EventAllVsAll extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	protected $name = '';
 
 	/**
-	 * numberOfPlayers
-	 *
-	 * @var integer
-	 */
-	protected $numberOfPlayers = 0;
-
-	/**
 	 * player
 	 *
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Dennis\Tournament\Domain\Model\PlayerAllVsAll>
@@ -92,27 +85,6 @@ class EventAllVsAll extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 */
 	public function setName($name) {
 		$this->name = $name;
-
-		return $this;
-	}
-
-	/**
-	 * Returns the numberOfPlayers
-	 *
-	 * @return integer $numberOfPlayers
-	 */
-	public function getNumberOfPlayers() {
-		return $this->numberOfPlayers;
-	}
-
-	/**
-	 * Sets the numberOfPlayers
-	 *
-	 * @param integer $numberOfPlayers
-	 * @return self
-	 */
-	public function setNumberOfPlayers($numberOfPlayers) {
-		$this->numberOfPlayers = $numberOfPlayers;
 
 		return $this;
 	}

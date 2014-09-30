@@ -106,15 +106,6 @@ $GLOBALS['TCA']['tx_tournament_domain_model_eventallvsall'] = array(
 				'eval' => 'trim'
 			),
 		),
-		'number_of_players' => array(
-			'exclude' => 1,
-			'label' => 'LLL:EXT:tournament/Resources/Private/Language/locallang_db.xlf:tx_tournament_domain_model_eventallvsall.number_of_players',
-			'config' => array(
-				'type' => 'input',
-				'size' => 4,
-				'eval' => 'int'
-			)
-		),
 		'player' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:tournament/Resources/Private/Language/locallang_db.xlf:tx_tournament_domain_model_eventallvsall.player',
