@@ -39,7 +39,7 @@ $GLOBALS['TCA']['tx_tournament_domain_model_tournament1on1'] = array(
 		),
 		'searchFields' => 'name,points_winner,points_loser,points_draw,events,player,',
 		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/Tournament1on1.php',
-		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_tournament_domain_model_tournament1on1.gif'
+		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_tournament_domain_model_tournament1on1.png'
 	),
 );
 
@@ -141,6 +141,7 @@ $GLOBALS['TCA']['tx_tournament_domain_model_encounter1on1'] = array(
 $GLOBALS['TCA']['tx_tournament_domain_model_tournamentallvsall'] = array(
 	'ctrl' => array(
 		'title'	=> 'LLL:EXT:tournament/Resources/Private/Language/locallang_db.xlf:tx_tournament_domain_model_tournamentallvsall',
+		'hideTable' => TRUE,
 		'label' => 'name',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
@@ -290,6 +291,7 @@ $GLOBALS['TCA']['tx_tournament_domain_model_teamallvsall'] = array(
 $GLOBALS['TCA']['tx_tournament_domain_model_tournamentko'] = array(
 	'ctrl' => array(
 		'title'	=> 'LLL:EXT:tournament/Resources/Private/Language/locallang_db.xlf:tx_tournament_domain_model_tournamentko',
+		'hideTable' => TRUE,
 		'label' => 'name',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
