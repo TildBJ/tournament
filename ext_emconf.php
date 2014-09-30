@@ -11,20 +11,23 @@
  ***************************************************************/
 
 $EM_CONF[$_EXTKEY] = array(
-	'title' => 'Tournament',
-	'description' => '',
+	'title' => 'Tournament Management',
+	'description' => 'This plugin allows you to manage tournaments. It supports the 1on1 system. Based on Extbase and Fluid',
 	'category' => 'plugin',
-	'author' => '',
-	'author_email' => '',
+	'author' => 'Dennis Römmich',
+	'author_email' => 'dennis@roemmich.eu',
+	'author_company' => 'sunzinet AG',
 	'state' => 'alpha',
 	'internal' => '',
 	'uploadfolder' => '1',
 	'createDirs' => '',
 	'clearCacheOnLoad' => 0,
-	'version' => '1.0.0',
+	'version' => '1.0.1',
 	'constraints' => array(
 		'depends' => array(
-			'typo3' => '6.2',
+			'typo3' => '6.2.0-6.2.99',
+			'extbase' => '1.3',
+			'fluid' => '1.3',
 		),
 		'conflicts' => array(
 		),
