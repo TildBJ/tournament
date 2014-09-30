@@ -69,7 +69,7 @@ $GLOBALS['TCA']['tx_tournament_domain_model_event1on1'] = array(
 		),
 		'searchFields' => 'name,date,encounter,',
 		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/Event1on1.php',
-		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_tournament_domain_model_event1on1.gif'
+		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_tournament_domain_model_tournament1on1.png'
 	),
 );
 
@@ -132,7 +132,7 @@ $GLOBALS['TCA']['tx_tournament_domain_model_encounter1on1'] = array(
 		),
 		'searchFields' => 'duration,team_home_points,team_guest_points,player_home,player_guest,',
 		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/Encounter1on1.php',
-		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_tournament_domain_model_encounter1on1.gif'
+		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_tournament_domain_model_tournament1on1.png'
 	),
 );
 
@@ -162,7 +162,7 @@ $GLOBALS['TCA']['tx_tournament_domain_model_tournamentallvsall'] = array(
 		),
 		'searchFields' => 'name,event,',
 		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/TournamentAllVsAll.php',
-		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_tournament_domain_model_tournamentallvsall.gif'
+		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_tournament_domain_model_tournament1on1.png'
 	),
 );
 
@@ -192,7 +192,7 @@ $GLOBALS['TCA']['tx_tournament_domain_model_eventallvsall'] = array(
 		),
 		'searchFields' => 'name,number_of_players,player,',
 		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/EventAllVsAll.php',
-		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_tournament_domain_model_eventallvsall.gif'
+		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_tournament_domain_model_tournament1on1.png'
 	),
 );
 
@@ -222,7 +222,7 @@ $GLOBALS['TCA']['tx_tournament_domain_model_playerallvsall'] = array(
 		),
 		'searchFields' => 'name,country,teams,',
 		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/PlayerAllVsAll.php',
-		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_tournament_domain_model_playerallvsall.gif'
+		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_tournament_domain_model_tournament1on1.png'
 	),
 );
 
@@ -252,7 +252,7 @@ $GLOBALS['TCA']['tx_tournament_domain_model_countryallvsall'] = array(
 		),
 		'searchFields' => 'name,short_name,',
 		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/CountryAllVsAll.php',
-		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_tournament_domain_model_countryallvsall.gif'
+		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_tournament_domain_model_tournament1on1.png'
 	),
 );
 
@@ -282,7 +282,7 @@ $GLOBALS['TCA']['tx_tournament_domain_model_teamallvsall'] = array(
 		),
 		'searchFields' => 'name,',
 		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/TeamAllVsAll.php',
-		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_tournament_domain_model_teamallvsall.gif'
+		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_tournament_domain_model_tournament1on1.png'
 	),
 );
 
@@ -312,7 +312,7 @@ $GLOBALS['TCA']['tx_tournament_domain_model_tournamentko'] = array(
 		),
 		'searchFields' => 'name,number_of_player,number_of_games_per_set,number_of_sets,event,',
 		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/TournamentKo.php',
-		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_tournament_domain_model_tournamentko.gif'
+		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_tournament_domain_model_tournament1on1.png'
 	),
 );
 
@@ -342,7 +342,7 @@ $GLOBALS['TCA']['tx_tournament_domain_model_eventko'] = array(
 		),
 		'searchFields' => 'name,date,encounter,',
 		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/EventKo.php',
-		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_tournament_domain_model_eventko.gif'
+		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_tournament_domain_model_tournament1on1.png'
 	),
 );
 
@@ -372,7 +372,7 @@ $GLOBALS['TCA']['tx_tournament_domain_model_encounterko'] = array(
 		),
 		'searchFields' => 'points_player_home,points_player_guest,player_home,player_guest,',
 		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/EncounterKo.php',
-		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_tournament_domain_model_encounterko.gif'
+		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_tournament_domain_model_tournament1on1.png'
 	),
 );
 
@@ -402,7 +402,7 @@ $GLOBALS['TCA']['tx_tournament_domain_model_playerko'] = array(
 		),
 		'searchFields' => 'name,',
 		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/PlayerKo.php',
-		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_tournament_domain_model_playerko.gif'
+		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_tournament_domain_model_tournament1on1.png'
 	),
 );
 
