@@ -66,14 +66,4 @@ class TournamentController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContr
 		$this->forward('index', 'Tournament' . self::$tournamentType, 'tournament', array('event' => $event));
 	}
 
-	/**
-	 * Main Function if no Type was selected
-	 *
-	 * @throws \TYPO3\CMS\Extbase\Mvc\Exception\NoSuchActionException
-	 * @return void
-	 */
-	protected function tournamentdisabledAction() {
-		throw new \TYPO3\CMS\Extbase\Mvc\Exception\NoSuchActionException('Please select a tournament type');
-	}
-
 }
