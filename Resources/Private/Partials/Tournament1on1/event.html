@@ -1,0 +1,26 @@
+<div class="tx-tournament-encounter">
+	<h2>{event.name} - <f:format.date format="d.m.Y">{event.date}</f:format.date></h2>
+	<table>
+		<f:for each="{event.encounter}" as="encounter" iteration="row">
+
+			<tr class="encounter {f:if(condition: '{row.isOdd}' then: 'odd', else: 'even')}">
+				<td class="playerHomeIcon">
+					<f:if condition="{encounter.playerHome.iconfile}"><f:image src="{encounter.playerHome.iconfile.url}" alt="" width="24c" height="24" /></f:if>
+				</td>
+				<td class="playerHome player">
+					{encounter.playerHome.name}
+				</td>
+				<td class="divider">-</td>
+				<td class="playerGuestIcon">
+					<f:if condition="{encounter.playerGuest.iconfile}"><f:image src="{encounter.playerGuest.iconfile.url}" alt="" width="24c" height="24c" /></f:if>
+				</td>
+				<td class="playerGuest player">
+					{encounter.playerGuest.name}
+				</td>
+				<td class="points">
+					{encounter.teamHomePoints} : {encounter.teamGuestPoints}
+				</td>
+			</tr>
+		</f:for>
+	</table>
+</div>

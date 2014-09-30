@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2014-09-29T09:03:59Z" product-name="tournament">
+		<header/>
+		<body>
+			<trans-unit id="name.description">
+				<source>name</source>
+			</trans-unit>
+			<trans-unit id="points_winner.description">
+				<source>pointsWinner</source>
+			</trans-unit>
+			<trans-unit id="points_loser.description">
+				<source>pointsLoser</source>
+			</trans-unit>
+			<trans-unit id="points_draw.description">
+				<source>pointsDraw</source>
+			</trans-unit>
+			<trans-unit id="events.description">
+				<source>events</source>
+			</trans-unit>
+			<trans-unit id="player.description">
+				<source>player</source>
+			</trans-unit>
+			<trans-unit id="rank">
+				<source>rank</source>
+			</trans-unit>
+			<trans-unit id="team">
+				<source>team</source>
+			</trans-unit>
+			<trans-unit id="matches">
+				<source>matches</source>
+			</trans-unit>
+			<trans-unit id="victories_short">
+				<source>W</source>
+			</trans-unit>
+			<trans-unit id="draws_short">
+				<source>D</source>
+			</trans-unit>
+			<trans-unit id="defeats_short">
+				<source>L</source>
+			</trans-unit>
+			<trans-unit id="goals">
+				<source>G</source>
+			</trans-unit>
+			<trans-unit id="goaldifference_short">
+				<source>GD</source>
+			</trans-unit>
+			<trans-unit id="points_short">
+				<source>Pts.</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

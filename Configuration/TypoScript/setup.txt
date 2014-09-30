@@ -1,0 +1,24 @@
+
+plugin.tx_tournament {
+	view {
+		templateRootPath = {$plugin.tx_tournament.view.templateRootPath}
+		partialRootPath = {$plugin.tx_tournament.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_tournament.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_tournament.persistence.storagePid}
+	}
+	features {
+		# uncomment the following line to enable the new Property Mapper.
+		# rewrittenPropertyMapper = 1
+	}
+}
+
+page {
+	includeCSS {
+		default = EXT:tournament/Resources/Public/Css/default.css
+	}
+	includeJS {
+		tournament = EXT:tournament/Resources/Public/Js/tournamentMain.js
+	}
+}
