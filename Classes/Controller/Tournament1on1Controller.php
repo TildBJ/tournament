@@ -76,22 +76,25 @@ class Tournament1on1Controller extends TournamentController implements Tournamen
 	}
 
 	/**
-	 * @param \Dennis\Tournament\Domain\Model\Event1on1 $event
+	 * indexAction
+	 *
 	 * @throws \TYPO3\CMS\Extbase\Mvc\Exception\NoSuchActionException
 	 * @return void
 	 */
-	public function indexAction(\Dennis\Tournament\Domain\Model\Event1on1 $event = NULL) {
-		if (!$event) {
-			$event = $this->event1on1Repository->getLatestEvent($this->tournamentId);
-		}
+	public function indexAction() {
+		$events = $this->event1on1Repository->findAll();
 
-		$this->view->assign('navs', $this->getNavElements());
 		$outputs = explode(',', $this->feOutput);
 		foreach ($outputs as $output) {
 			if ($output == 'encounter') {
-				$this->view->assign('event', $event);
+				$this->view->assign('events', $events);
 			} elseif ($output == 'table') {
-				$this->view->assign('rows', $this->generateTable($this->tournamentId, $event));
+				// @Todo: Find a better solution for currentPage
+				$widget = array('currentPage' => 0);
+				if ($this->request->hasArgument('@widget_0')) {
+					$widget = $this->request->getArgument('@widget_0');
+				}
+				$this->view->assign('rows', $this->generateTable($this->tournamentId, $events->offsetGet($widget['currentPage'])));
 			} else {
 				throw new \TYPO3\CMS\Extbase\Mvc\Exception\NoSuchActionException('Invalid Item');
 			}
@@ -101,29 +104,28 @@ class Tournament1on1Controller extends TournamentController implements Tournamen
 	/**
 	 * Main function for the Table View
 	 *
-	 * @param $uid
-	 * @param $param
+	 * @param int $tournamentId
+	 * @param \Dennis\Tournament\Domain\Model\Event1on1 $currentEvent
 	 * @return mixed
 	 */
-	protected function generateTable($uid, $param) {
-		$this->tournamentSettings = $this->tournament1on1Repository->findByUid($uid);
-		$this->event = ($param) ? $param : $this->event1on1Repository->getLatestEvent($uid);
+	protected function generateTable($tournamentId, $currentEvent) {
+		$this->tournamentSettings = $this->tournament1on1Repository->findByUid($tournamentId);
 
-		if ($this->event) {
-			$teams = $this->tournament1on1Repository->findByUid($uid)->getPlayer();
+		if ($currentEvent) {
+			$teams = $this->tournament1on1Repository->findByUid($tournamentId)->getPlayer();
 			$table = array();
 
 			foreach ($teams as $team) {
 
-				$this->encounters = $this->encounter1on1Repository->getEncounters($team, $this->event->getUid());
+				$this->encounters = $this->encounter1on1Repository->getEncounters($team, $currentEvent->getUid());
 
 				/** @var $team Player1on1 */
-				$team->setCountGames($this->encounter1on1Repository->countGames($team, $this->event->getUid()))
-					->setVictories($this->countVictories($team, $this->event->getUid()))
-					->setDraws($this->countDraws($team, $this->event->getUid()))
-					->setDefeats($this->countDefeats($team, $this->event->getUid()))
-					->setGoals($this->countGoals($team, $this->event->getUid()))
-					->setGoalsAgainst($this->countGoalsAgainst($team, $this->event->getUid()));
+				$team->setCountGames($this->encounter1on1Repository->countGames($team, $currentEvent->getUid()))
+					->setVictories($this->countVictories($team, $currentEvent->getUid()))
+					->setDraws($this->countDraws($team, $currentEvent->getUid()))
+					->setDefeats($this->countDefeats($team, $currentEvent->getUid()))
+					->setGoals($this->countGoals($team, $currentEvent->getUid()))
+					->setGoalsAgainst($this->countGoalsAgainst($team, $currentEvent->getUid()));
 
 				$points = $this->calculatePoints($team);
 
@@ -299,15 +301,6 @@ class Tournament1on1Controller extends TournamentController implements Tournamen
 		}
 
 		return $goalsAgainst;
-	}
-
-	/**
-	 * Get the navigationbar for the view
-	 *
-	 * @return array|\TYPO3\CMS\Extbase\Persistence\QueryResultInterface
-	 */
-	protected function getNavElements() {
-		return $this->event1on1Repository->findAll();
 	}
 
 	/**

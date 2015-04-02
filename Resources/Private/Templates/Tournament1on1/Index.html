@@ -1,19 +1,12 @@
 <div id="tx-tournament">
 
-<f:if condition="{event}">
-
-	<f:render partial="Tournament1on1/nav" arguments="{navs: navs}" />
-
-	<f:render partial="Tournament1on1/event" arguments="{event: event}" />
-
-</f:if>
-
-<f:if condition="{rows}">
-
-	<f:render partial="Tournament1on1/nav" arguments="{navs: navs}" />
-
-	<f:render partial="Tournament1on1/table" arguments="{rows: rows}" />
-
+<f:if condition="{events}">
+	<f:widget.paginate objects="{events}" as="paginatedEvents" configuration="{itemsPerPage: 1, insertAbove: 1, insertBelow: 0}">
+		<f:for each="{paginatedEvents}" as="event">
+			<f:render partial="Tournament1on1/event" arguments="{event: event}" />
+			<f:render partial="Tournament1on1/table" arguments="{rows: rows}" />
+		</f:for>
+	</f:widget.paginate>
 </f:if>
 
 </div>

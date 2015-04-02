@@ -3,12 +3,12 @@
 	margin-bottom: 10px;
 }
 
-#tx-tournament ul.tx-tournament-1on1-nav {
+#tx-tournament ul.f3-widget-paginator {
 	margin: 10px 0 0 0;
 	padding: 0;
 }
 
-#tx-tournament ul.tx-tournament-1on1-nav li {
+#tx-tournament ul.f3-widget-paginator li {
 	list-style: none;
 	float: left;
 	position: relative;
@@ -19,7 +19,14 @@
 	white-space: nowrap;
 }
 
-#tx-tournament ul.tx-tournament-1on1-nav li a {
+
+#tx-tournament ul.f3-widget-paginator li.current {
+	padding: 8px 15px;
+	border: 1px solid #333;
+	border-bottom: none;
+}
+
+#tx-tournament ul.f3-widget-paginator li a {
 	float: left;
 	padding: 8px 15px;
 	text-decoration: none;
@@ -28,7 +35,7 @@
 	border: 1px solid #333;
 }
 
-#tx-tournament ul.tx-tournament-1on1-nav li a:hover {
+#tx-tournament ul.f3-widget-paginator li a:hover {
 	background-color: #FFF;
 	color: #333;
 }
