@@ -7,7 +7,6 @@ if (!defined('TYPO3_MODE')) {
 	'Dennis.' . $_EXTKEY,
 	'Pi1',
 	array(
-		'Tournament' => 'show',
 		'Tournament1on1' => 'index',
 	),
 	// non-cacheable actions

@@ -15,55 +15,33 @@ namespace Dennis\Tournament\Controller;
  *
  * @package Dennis\Tournament\Controller
  */
-class TournamentController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
+class TournamentController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController implements TournamentInterface {
 
 	/**
-	 * @var int $uid
+	 * @var $tournamentId
 	 */
-	public static $uid;
-
-	/**
-	 * @var string $feOutput
-	 */
-	public static $feOutput;
-
-	/**
-	 * @var string $tournamentType
-	 */
-	public static $tournamentType;
+	public $tournamentId;
 
 	/**
 	 * @throws \TYPO3\CMS\Extbase\Mvc\Exception\NoSuchActionException
 	 * @return void
 	 */
 	public function initializeAction() {
+		$this->setTournamentId($this->settings['tournament1on1']);
 
-		static::$uid = $this->settings['tournament1on1'];
-		static::$feOutput = $this->settings['FEoutput'];
-		static::$tournamentType = $this->settings['tournamentType'];
-
-		if (!self::$uid) {
+		if (!$this->tournamentId) {
 			throw new \TYPO3\CMS\Extbase\Mvc\Exception\NoSuchActionException('Please select a tournament');
-		}
-
-		if (!self::$feOutput) {
-			throw new \TYPO3\CMS\Extbase\Mvc\Exception\NoSuchActionException('Pleas select an Item to show');
-		}
-
-		if (!self::$tournamentType) {
-			throw new \TYPO3\CMS\Extbase\Mvc\Exception\NoSuchActionException('Please select a tournament type');
 		}
 	}
 
 	/**
-	 * Main Function
+	 * Sets the TournamentId
 	 *
-	 * @param \Dennis\Tournament\Domain\Model\Event1on1 $event
-	 * @throws \TYPO3\CMS\Extbase\Mvc\Exception\StopActionException
+	 * @param $tournamentId
 	 * @return void
 	 */
-	protected function showAction(\Dennis\Tournament\Domain\Model\Event1on1 $event = NULL) {
-		$this->forward('index', 'Tournament' . self::$tournamentType, 'tournament', array('event' => $event));
+	public function setTournamentId($tournamentId) {
+		$this->tournamentId = $tournamentId;
 	}
 
 }

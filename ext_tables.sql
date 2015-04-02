@@ -56,6 +56,8 @@ CREATE TABLE tx_tournament_domain_model_event1on1 (
 	date date DEFAULT '0000-00-00',
 	encounter int(11) unsigned DEFAULT '0' NOT NULL,
 
+	sorting int(11) unsigned DEFAULT '0' NOT NULL,
+
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
 	cruser_id int(11) unsigned DEFAULT '0' NOT NULL,
@@ -143,6 +145,8 @@ CREATE TABLE tx_tournament_domain_model_encounter1on1 (
 	team_guest_points int(11) DEFAULT '0' NOT NULL,
 	player_home int(11) unsigned DEFAULT '0',
 	player_guest int(11) unsigned DEFAULT '0',
+
+	sorting int(11) unsigned DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,

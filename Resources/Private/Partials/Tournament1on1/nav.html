@@ -1,7 +1,7 @@
 <ul class="tx-tournament-1on1-nav">
 	<f:for each="{navs}" as="nav" iteration="i">
 		<li class="<f:if condition='{i.isFirst}'>firstItem</f:if><f:if condition='{i.isLast}'>lastItem</f:if>">
-			<f:link.action action="show" controller="Tournament" arguments="{event: nav.uid}">{i.cycle}</f:link.action>
+			<f:link.action controller="Tournament1on1" arguments="{event: nav.uid}">{i.cycle}</f:link.action>
 		</li>
 	</f:for>
 </ul>

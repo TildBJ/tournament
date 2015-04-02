@@ -20,14 +20,14 @@ class Event1on1Repository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 	/**
 	 * Get the latest event
 	 *
-	 * @param $uid
+	 * @param int $tournamentId
 	 * @return object
 	 */
-	public function getLatestEvent($uid) {
+	public function getLatestEvent($tournamentId) {
 		$query = $this->createQuery();
 
 		$query->matching(
-			$query->equals('tournament1on1', $uid)
+			$query->equals('tournament1on1', $tournamentId)
 		);
 		$query->setOrderings(array('sorting' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING));
 

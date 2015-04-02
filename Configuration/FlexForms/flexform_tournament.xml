@@ -10,7 +10,7 @@
 			</TCEforms>
 			<type>array</type>
 			<el>
-				<settings.tournamentType>
+				<switchableControllerActions>
 					<TCEforms>
 						<label>Turnier Typ</label>
 						<onChange>reload</onChange>
@@ -23,7 +23,7 @@
 								</numIndex>
 								<numIndex index="1" type="array">
 									<numIndex index="0">1 on 1</numIndex>
-									<numIndex index="1">1on1</numIndex>
+									<numIndex index="1">Tournament1on1->index</numIndex>
 								</numIndex>
 								<!--<numIndex index="2" type="array">-->
 									<!--<numIndex index="0">All vs All</numIndex>-->
@@ -39,14 +39,14 @@
 							<size>1</size>
 						</config>
 					</TCEforms>
-				</settings.tournamentType>
+				</switchableControllerActions>
 
 
 <!--			flexform 1on1-->
 				<settings.tournament1on1>
 					<TCEforms>
 						<label>LLL:EXT:tournament/Resources/Private/Language/locallang.xlf:tx_tournament_domain_model_tournament1on1</label>
-						<displayCond>FIELD:settings.tournamentType:=:1on1</displayCond>
+						<displayCond>FIELD:switchableControllerActions:=:Tournament1on1->index</displayCond>
 						<config>
 							<type>select</type>
 
@@ -82,7 +82,7 @@
 				<settings.FEoutput>
 					<TCEforms>
 						<label>LLL:EXT:tournament/Resources/Private/Language/locallang.xlf:tx_tournament_domain_model_fe_output</label>
-						<displayCond>FIELD:settings.tournamentType:=:1on1</displayCond>
+						<displayCond>FIELD:switchableControllerActions:=:Tournament1on1->index</displayCond>
 						<config>
 							<type>select</type>
 							<items type="array">

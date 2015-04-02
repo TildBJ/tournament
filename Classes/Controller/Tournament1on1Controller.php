@@ -17,7 +17,7 @@ use \Dennis\Tournament\Domain\Model\Player1on1;
  *
  * @package Dennis\Tournament\Controller
  */
-class Tournament1on1Controller extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
+class Tournament1on1Controller extends TournamentController implements Tournament1on1Interface {
 
 	/**
 	 * Tournament1on1Repository
@@ -59,22 +59,39 @@ class Tournament1on1Controller extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionC
 	protected $encounters;
 
 	/**
+	 * @var string
+	 */
+	protected $feOutput;
+
+	/**
+	 * initializeAction
+	 */
+	public function initializeAction() {
+		parent::initializeAction();
+		$this->setFeOutput($this->settings['FEoutput']);
+
+		if (!$this->feOutput) {
+			throw new \TYPO3\CMS\Extbase\Mvc\Exception\NoSuchActionException('Pleas select an Item to show');
+		}
+	}
+
+	/**
 	 * @param \Dennis\Tournament\Domain\Model\Event1on1 $event
 	 * @throws \TYPO3\CMS\Extbase\Mvc\Exception\NoSuchActionException
 	 * @return void
 	 */
 	public function indexAction(\Dennis\Tournament\Domain\Model\Event1on1 $event = NULL) {
 		if (!$event) {
-			$event = $this->event1on1Repository->getLatestEvent(TournamentController::$uid);
+			$event = $this->event1on1Repository->getLatestEvent($this->tournamentId);
 		}
 
 		$this->view->assign('navs', $this->getNavElements());
-		$outputs = explode(',', TournamentController::$feOutput);
+		$outputs = explode(',', $this->feOutput);
 		foreach ($outputs as $output) {
 			if ($output == 'encounter') {
 				$this->view->assign('event', $event);
 			} elseif ($output == 'table') {
-				$this->view->assign('rows', $this->generateTable(TournamentController::$uid, $event));
+				$this->view->assign('rows', $this->generateTable($this->tournamentId, $event));
 			} else {
 				throw new \TYPO3\CMS\Extbase\Mvc\Exception\NoSuchActionException('Invalid Item');
 			}
@@ -291,5 +308,15 @@ class Tournament1on1Controller extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionC
 	 */
 	protected function getNavElements() {
 		return $this->event1on1Repository->findAll();
+	}
+
+	/**
+	 * Sets the feOutput
+	 *
+	 * @param $feOutput
+	 * @return void
+	 */
+	public function setFeOutput($feOutput) {
+		$this->feOutput = $feOutput;
 	}
 }
